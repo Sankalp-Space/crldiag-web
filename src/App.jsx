@@ -5,6 +5,9 @@ import Department from './components/department'
 import Covid from './components/covid'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import ComingSoon from './components/ComingSoon'
+import Contact from './components/Contact'
+import Accreditations from './components/Accreditations'
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/department" element={<Department />} />
         <Route path="/covid" element={<Covid />} />
+        <Route path="/contacts" element={<Contact />} />
+        <Route path="/accreditations" element={<Accreditations />} />
+        <Route path="*" element={<ComingSoon />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "./Navbar";
 
 export default function About() {
   const [active, setActive] = useState(null);
@@ -55,7 +56,6 @@ export default function About() {
   return (
     <div className="bg-white w-full pb-20">
       {/* Page Title */}
-      <Navbar />
 
       {/* Top: Director text + Image */}
       <div className="max-w-6xl mx-auto mt-12 p-8 bg-[#0E0A47] text-white rounded-lg flex flex-col md:flex-row items-center gap-10">
@@ -107,7 +107,6 @@ export default function About() {
         ))}
 
       </div>
-      <Footer />
     </div>
   );
 }
