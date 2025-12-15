@@ -48,38 +48,100 @@ function Home() {
 
       {/* ADVANTAGES */}
       <motion.section
-        className="px-4 md:px-10 py-20"
+        className="px-4 md:px-10 py-20 bg-gradient-to-br from-blue-50 to-indigo-100"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <h3 className="text-center text-sm tracking-wide text-gray-500">
-          WHY PEOPLE CHOOSE OUR LABORATORY
-        </h3>
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-sm tracking-widest text-gray-600 uppercase mb-4">
+            WHY PEOPLE CHOOSE OUR LABORATORY
+          </h3>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            OUR ADVANTAGES
+          </h2>
+          <div className="w-24 h-1 bg-red-500 mx-auto rounded-full"></div>
+        </motion.div>
 
-        <h2 className="text-center text-5xl font-bold mb-10">OUR ADVANTAGES</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <motion.div
+            className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.p
+              className="text-5xl font-bold text-blue-600 mb-3"
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              90+
+            </motion.p>
+            <p className="text-gray-600 font-semibold text-lg">DEPARTMENT EXPERTS</p>
+            <p className="text-sm text-gray-500 mt-2">Highly qualified professionals</p>
+          </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center text-3xl font-bold">
-          <div>
-            <p className="text-4xl">90+</p>
-            <p className="text-sm text-gray-500 mt-1">DEPARTMENT EXPERTS</p>
-          </div>
+          <motion.div
+            className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.p
+              className="text-5xl font-bold text-green-600 mb-3"
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              1500+
+            </motion.p>
+            <p className="text-gray-600 font-semibold text-lg">COLLECTION CENTRES</p>
+            <p className="text-sm text-gray-500 mt-2">Across multiple locations</p>
+          </motion.div>
 
-          <div>
-            <p className="text-4xl">1500+</p>
-            <p className="text-sm text-gray-500 mt-1">COLLECTION CENTRES</p>
-          </div>
+          <motion.div
+            className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.p
+              className="text-5xl font-bold text-purple-600 mb-3"
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
+              10000+
+            </motion.p>
+            <p className="text-gray-600 font-semibold text-lg">SQ FEET LAB AREA</p>
+            <p className="text-sm text-gray-500 mt-2">State-of-the-art facility</p>
+          </motion.div>
 
-          <div>
-            <p className="text-4xl">10000+</p>
-            <p className="text-sm text-gray-500 mt-1">SQ FEET LAB AREA</p>
-          </div>
-
-          <div>
-            <p className="text-4xl">6</p>
-            <p className="text-sm text-gray-500 mt-1">FLOOR BUILDING</p>
-          </div>
+          <motion.div
+            className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.p
+              className="text-5xl font-bold text-red-600 mb-3"
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              viewport={{ once: true }}
+            >
+              6
+            </motion.p>
+            <p className="text-gray-600 font-semibold text-lg">FLOOR BUILDING</p>
+            <p className="text-sm text-gray-500 mt-2">Modern infrastructure</p>
+          </motion.div>
         </div>
       </motion.section>
 
@@ -118,18 +180,7 @@ function Home() {
         </div>
       </motion.section>
 
-      {/* BANKING DETAILS */}
-      <section className="px-4 md:px-10 py-20">
-        <h2 className="text-center text-3xl font-bold text-red-600 mb-10">
-          BANKING DETAILS
-        </h2>
-
-        <div className="space-y-4 text-xl">
-          <p>ICICI BANK</p>
-          <p>AXIS BANK</p>
-          <p>HDFC BANK</p>
-        </div>
-      </section>
+      
 
     </main>
   );
