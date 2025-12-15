@@ -6,8 +6,8 @@ function Navbar() {
 
   return (
     <nav className="w-full flex items-center justify-between px-4 md:px-10 py-4 bg-white shadow-lg border-b border-gray-200">
-      <div className="flex items-center gap-2">
-        <img src="/Logo.jpg" alt="Logo" className="w-32 h-16 rounded-md shadow-sm" />
+      <div className="flex items-center gap-2"><Link to="/">
+        <img src="/Logo.jpg" alt="Logo" className="w-32 h-16 rounded-md shadow-sm" /></Link>
       </div>
 
       {/* Desktop Menu */}
