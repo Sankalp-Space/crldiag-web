@@ -122,20 +122,7 @@ export default function Covid() {
         </div>
       </div>
 
-      {/* Banking Details */}
-      <div className="mt-16">
-        <div className="bg-red-600 text-white text-center py-3 font-bold">
-          BANKING DETAILS
-        </div>
-
-        <div className="max-w-5xl mx-auto bg-white border border-gray-300 p-6">
-          <h4 className="text-blue-800 font-semibold text-lg">ICICI BANK</h4>
-          <p className="text-gray-700 mt-2">Account Name: CRL Diagnostics Pvt Ltd</p>
-          <p className="text-gray-700">Account Number: 1234567890</p>
-          <p className="text-gray-700">IFSC Code: ICIC0001234</p>
-          <p className="text-gray-700">Branch: Connaught Place, New Delhi</p>
-        </div>
-      </div>
+      
     </div>
   );
 }

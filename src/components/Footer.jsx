@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaPhoneAlt, FaEnvelope, FaLinkedinIn, FaTwitter, FaFacebookF } from "react-icons/fa";
 
 export default function Footer() {
@@ -154,10 +155,10 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-lg mb-4 text-gray-800">SITE MAP</h3>
           <ul className="space-y-3 text-red-600 font-medium">
-            <li className="hover:text-red-700 transition-colors duration-200 cursor-pointer">COVID-19</li>
-            <li className="hover:text-red-700 transition-colors duration-200 cursor-pointer">PATIENTS</li>
-            <li className="hover:text-red-700 transition-colors duration-200 cursor-pointer">DOCTORS</li>
-            <li className="hover:text-red-700 transition-colors duration-200 cursor-pointer">ABOUT US</li>
+            <li><Link to="/covid" className="hover:text-red-700 transition-colors duration-200">COVID-19</Link></li>
+            <li><Link to="/patients" className="hover:text-red-700 transition-colors duration-200">PATIENTS</Link></li>
+            <li><Link to="/doctors" className="hover:text-red-700 transition-colors duration-200">DOCTORS</Link></li>
+            <li><Link to="/about" className="hover:text-red-700 transition-colors duration-200">ABOUT US</Link></li>
           </ul>
         </div>
 
@@ -165,17 +166,17 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-lg mb-4 text-red-600">PATIENTS</h3>
           <ul className="space-y-3 text-gray-700">
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">BOOK A TEST</li>
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">HEALTH PACKAGES</li>
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">COVID-19</li>
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">PATIENT REPORTS</li>
+            <li><Link to="/book-a-test" className="hover:text-gray-900 transition-colors duration-200">BOOK A TEST</Link></li>
+            <li><Link to="/health-packages" className="hover:text-gray-900 transition-colors duration-200">HEALTH PACKAGES</Link></li>
+            <li><Link to="/covid" className="hover:text-gray-900 transition-colors duration-200">COVID-19</Link></li>
+            <li><Link to="/patient-reports" className="hover:text-gray-900 transition-colors duration-200">PATIENT REPORTS</Link></li>
           </ul>
 
           <h3 className="font-bold text-lg mt-8 mb-4 text-red-600">DOCTORS</h3>
           <ul className="space-y-3 text-gray-700">
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">DOCTORS</li>
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">DEPARTMENT</li>
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">CLINICAL REFERENCE LAB</li>
+            <li><Link to="/doctors" className="hover:text-gray-900 transition-colors duration-200">DOCTORS</Link></li>
+            <li><Link to="/department" className="hover:text-gray-900 transition-colors duration-200">DEPARTMENT</Link></li>
+            <li><Link to="/clinical-reference-lab" className="hover:text-gray-900 transition-colors duration-200">CLINICAL REFERENCE LAB</Link></li>
           </ul>
         </div>
 
@@ -183,14 +184,14 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-lg mb-4 text-red-600">ABOUT CRL</h3>
           <ul className="space-y-3 text-gray-700">
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">ABOUT US</li>
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">ACCREDITATIONS AND ACHIEVEMENTS</li>
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">OUR OFFICES</li>
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">VISUALS</li>
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">CONTACT US</li>
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">PRIVACY POLICY</li>
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">CAREERS</li>
-            <li className="hover:text-gray-900 transition-colors duration-200 cursor-pointer">TERMS AND CONDITIONS</li>
+            <li><Link to="/about" className="hover:text-gray-900 transition-colors duration-200">ABOUT US</Link></li>
+            <li><Link to="/accreditations" className="hover:text-gray-900 transition-colors duration-200">ACCREDITATIONS AND ACHIEVEMENTS</Link></li>
+            <li><Link to="/our-offices" className="hover:text-gray-900 transition-colors duration-200">OUR OFFICES</Link></li>
+            <li><Link to="/visuals" className="hover:text-gray-900 transition-colors duration-200">VISUALS</Link></li>
+            <li><Link to="/contacts" className="hover:text-gray-900 transition-colors duration-200">CONTACT US</Link></li>
+            <li><Link to="/privacy-policy" className="hover:text-gray-900 transition-colors duration-200">PRIVACY POLICY</Link></li>
+            <li><Link to="/careers" className="hover:text-gray-900 transition-colors duration-200">CAREERS</Link></li>
+            <li><Link to="/terms-conditions" className="hover:text-gray-900 transition-colors duration-200">TERMS AND CONDITIONS</Link></li>
           </ul>
         </div>
       </div>
@@ -206,7 +207,10 @@ export default function Footer() {
       </div>
 
       {/* Scroll to top */}
-      <button className="fixed bottom-6 right-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300">
+      <button 
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
+      >
         ↑
       </button>
     </footer>
